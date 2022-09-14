@@ -4,8 +4,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Nunito", sans-serif;
 }
 body {
-  background-color: lavender;
-  font-family: "Nunito", sans-serif;
+  background-color: rgb(229, 229, 246);
 }

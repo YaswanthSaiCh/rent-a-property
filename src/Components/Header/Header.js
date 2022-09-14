@@ -1,17 +1,36 @@
 import React from 'react'
-import { RiHomeSmile2Fill } from 'react-icons/ri'
 import './Header.css'
+
 const Header = () => {
     return (
-        <nav className='navbar'>
-            <div className='logo'>
-                <RiHomeSmile2Fill className='icon' />
-                <h3 className='appName'>Rent a Property</h3>
+        <header className='header'>
+            <div className='text-header'>
+                <h1 className='heading'>Search Properties for Rent</h1>
+                <div className='search-box'>
+                    <input type='text' className='search' />
+                    <button className='search-button'>Search</button>
+                </div>
             </div>
-            <div>
-                <button> Add a Property</button>
+            <div className='filter'>
+                <div>
+                    <h3>Location</h3>
+                    <input type='text' />
+                </div>
+                <div>
+                    <h3>Location</h3>
+                    <input type='text' />
+                </div>
+                <div>
+                    <h3>Location</h3>
+                    <input type='text' />
+                </div>
+                <div>
+                    <h3>Location</h3>
+                    <input type='text' />
+                </div>
+                <button className='filter-search'>Search</button>
             </div>
-        </nav>
+        </header>
     )
 }
 
