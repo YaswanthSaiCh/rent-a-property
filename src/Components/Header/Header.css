@@ -1,5 +1,7 @@
 .header {
   margin: 3rem;
+  display: flex;
+  flex-direction: column;
 }
 .text-header {
   display: flex;
@@ -8,6 +10,7 @@
 }
 .search-box {
   background-color: rgb(244, 244, 250);
+  margin-left: 20px;
   padding: 10px;
   border-radius: 8px;
   border: 0.1px solid rgb(188, 188, 188);
@@ -36,15 +39,23 @@
   color: white;
   background-color: slateblue;
 }
-.filter {
+.filter-box {
   background-color: white;
   margin-top: 20px;
   height: 5rem;
-  width: 100%;
+  max-width: 1040px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   border-radius: 10px;
 }
 .filter {
+  border-right: 1px solid rgba(204, 204, 204, 0.514);
+}
+.filter > input {
+  border: none;
+  outline: none;
+}
+.filter > h3 {
+  color: #4c4757;
 }

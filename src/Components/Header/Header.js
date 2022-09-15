@@ -11,20 +11,20 @@ const Header = () => {
                     <button className='search-button'>Search</button>
                 </div>
             </div>
-            <div className='filter'>
-                <div>
+            <div className='filter-box'>
+                <div className='filter'>
                     <h3>Location</h3>
                     <input type='text' />
                 </div>
-                <div>
+                <div className='filter'>
                     <h3>Location</h3>
-                    <input type='text' />
+                    <input type='menu' />
                 </div>
-                <div>
+                <div className='filter'>
                     <h3>Location</h3>
-                    <input type='text' />
+                    <input type='date' />
                 </div>
-                <div>
+                <div className='filter'>
                     <h3>Location</h3>
                     <input type='text' />
                 </div>
