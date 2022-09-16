@@ -1,0 +1,6 @@
+.App {
+  display: flex;
+  min-width: 340px;
+  flex-direction: column;
+  justify-content: space-around;
+}

@@ -2,7 +2,7 @@
   display: flex;
   background-color: rgb(244, 244, 250);
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 10vh;
   box-shadow: 2px -3px 10px 1px gray;
   position: static;
@@ -13,6 +13,8 @@
   font-size: 20px;
   cursor: pointer;
   color: midnightblue;
+  text-decoration: none;
+  margin-left: 30px;
 }
 .icon {
   margin-right: 2px;
@@ -27,6 +29,8 @@
   border-radius: 8px;
   font-weight: bolder;
   cursor: pointer;
+  margin: 0px 50px;
+  text-decoration: none;
 }
 .button:hover {
   border: 2px solid slateblue;
@@ -34,4 +38,9 @@
   color: slateblue;
   background-color: transparent;
   border-radius: 10px;
+}
+.fav-button {
+  text-decoration: none;
+  font-size: large;
+  font-weight: 500;
 }

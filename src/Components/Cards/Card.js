@@ -1,30 +1,48 @@
-import React from "react";
-import { BiBed, BiBath, BiHeart, BiShapeSquare } from "react-icons/bi";
+import React, { useState } from "react";
+import { BiBed, BiBath, BiHeart, BiX, BiShapeSquare } from "react-icons/bi";
 import "./Card.css";
 
-const Card = () => {
+const Card = ({ item, state }) => {
+    const [heart, setHeart] = useState(false);
+    const handleChange = (event) => {
+        setHeart(!heart);
+        console.log(event.target.value);
+    };
     return (
         <article className="card">
-            <img
-                src="https://a0.muscache.com/im/pictures/25624825/6ef8e934_original.jpg?im_w=720"
-                alt="/"
-            />
+            <img src={item.images[0]} alt="/" />
             <div className="body">
                 <div className="price">
-                    <h3>Price</h3>
-                    <BiHeart className="icon fav" size={"2em"} />
+                    <h3 className="price-heading">
+                        {item.price}<span className="sub-heading">/{item.qualifier}</span>
+                    </h3>
+                    {heart ? (
+                        <BiX
+                            className="icon X"
+                            size={"2em"}
+                            onClick={(event) => handleChange(event)}
+                        />
+                    ) : (
+                        <BiHeart
+                            className="icon fav"
+                            size={"2em"}
+                            onClick={(event) => handleChange(event)}
+                        />
+                    )}
                 </div>
-                <h3>Name</h3>
-                <h5>Desc</h5>
+                <div className="desc">
+                    <h2 className="title">{item.title.split(",")[0]}</h2>
+                    <h4 className="location">{item.publicAddress}</h4>
+                </div>
             </div>
-            <div className="footer">
+            <div className="card-footer">
                 <div>
                     <BiBed className="icon" />
-                    <p>Bed</p>
+                    <p>{item.bedrooms}Beds</p>
                 </div>
                 <div>
                     <BiBath className="icon" />
-                    <p>Bath</p>
+                    <p>{Math.ceil(item.bathrooms)}Bathrooms</p>
                 </div>
                 <div>
                     <BiShapeSquare className="icon" />

@@ -1,17 +1,23 @@
-import './App.css';
-import Card from './Components/Cards/Card';
-import Footer from './Components/Footer/Footer';
-import Header from './Components/Header/Header';
 import Navbar from './Components/Navbar/Navbar';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './Components/Home';
+import Favourites from './Components/Favourites';
+import AddProperty from './Components/AddProperty';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Header />
-      <Card />
-      <Footer />
+    <div>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/favourites' element={<Favourites />} />
+          <Route path='/add-a-property' element={<AddProperty />} />
+        </Routes>
+      </BrowserRouter>
     </div>
+
   );
 }
 

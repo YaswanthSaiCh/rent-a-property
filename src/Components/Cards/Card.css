@@ -1,11 +1,14 @@
 .card {
   background-color: white;
   width: 300px;
+  height: 380px;
   overflow: hidden;
   border-radius: 10px;
 }
 img {
   width: 100%;
+  height: 50%;
+  object-fit: cover;
 }
 .body {
   display: flex;
@@ -13,23 +16,65 @@ img {
   justify-content: center;
   padding: 10px;
 }
-.footer,
-.footer > div {
+.card-footer,
+.card-footer > div {
   display: flex;
 }
-.footer {
+.card-footer {
   justify-content: space-around;
   padding: 10px;
+  border-top: 1px solid rgba(165, 163, 163, 0.414);
 }
 .icon {
   color: slateblue;
 }
 .fav {
   cursor: pointer;
-  border: 2px solid rgba(129, 128, 128, 0.247);
+  border: 1.7px solid rgba(207, 207, 207, 0.407);
+  border-radius: 50%;
+  padding: 5px;
+  transition: ease-in-out 0.2s;
+}
+.fav:hover {
+  background-color: slateblue;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+}
+.X {
+  cursor: pointer;
+  border: 1.7px solid rgba(207, 207, 207, 0.407);
+  border-radius: 50%;
+  padding: 5px;
+  transition: ease-in-out 0.2s;
+}
+.X:hover {
+  background-color: indianred;
+  color: white;
+  border: none;
   border-radius: 50%;
   padding: 5px;
 }
 .price {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+}
+.desc {
+  padding: 0px 10px 0px 5px;
+}
+.title {
+  margin-bottom: 5px;
+}
+.location {
+  color: gray;
+}
+.price-heading {
+  color: slateblue;
+}
+.sub-heading {
+  font-size: 15px;
+  color: rgb(180, 180, 180);
 }
