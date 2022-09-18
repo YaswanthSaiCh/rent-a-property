@@ -47,15 +47,15 @@ const Card = ({ item }) => {
             <div className="card-footer">
                 <div className="footer-items">
                     <BiBed className="icon" />
-                    <h5>{item.bedrooms}Beds</h5>
+                    <h5 className="footer-icon-text">{item.bedrooms}Beds</h5>
                 </div>
                 <div className="footer-items">
                     <BiBath className="icon" />
-                    <h5>{Math.ceil(item.bathrooms)}Bathrooms</h5>
+                    <h5 className="footer-icon-text">{Math.ceil(item.bathrooms)}Bathrooms</h5>
                 </div>
                 <div className="footer-items">
                     <BiStar className="icon" />
-                    <h5>{item.avgRating}</h5>
+                    <h5 className="footer-icon-text">{item.avgRating}</h5>
                 </div>
             </div>
         </article>

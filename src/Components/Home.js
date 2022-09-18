@@ -52,58 +52,11 @@ const Home = () => {
         }
     }
 
-    const handleChange = (event) => {
-        const searchTerm = event.target.value.toLowerCase();
-        const searchResult = searchData.filter(
-            (data) => data.title.split(",")[0].toLowerCase().includes(searchTerm)
-        );
-        setState({
-            ...state,
-            propertyData: searchResult
-        });
-    }
-    const handleFilterSubmit = (event) => {
-        event.preventDefault();
-        handleLocationChange(event)
-        // handlePriceChange(event)
-        // handleCheckinChange(event)
-    }
 
-    const handleLocationChange = (event) => {
-        const searchTerm = event.target.id.toLowerCase();
-        const searchResult = searchData.filter(
-            (data) => data.city.toLowerCase().includes(searchTerm)
-        );
-        setState({
-            ...state,
-            propertyData: searchResult
-        });
-    }
-
-    const handlePriceChange = (event) => {
-        const searchTerm = event.target.price.value.toLowerCase();
-        const searchResult = searchData.filter(
-            (data) => data.price.toLowerCase().includes(searchTerm)
-        );
-        setState({
-            ...state,
-            propertyData: searchResult
-        });
-    }
-    const handleCheckinChange = (event) => {
-        const searchTerm = event.target.checkin.value.toLowerCase();
-        const searchResult = searchData.filter(
-            (data) => data.checkin.toLowerCase().includes(searchTerm)
-        );
-        setState({
-            ...state,
-            propertyData: searchResult
-        });
-    }
 
     return (
         <div className='App'>
-            <Header handleChange={handleChange} filterData={filterData} handleFilterSubmit={handleFilterSubmit} />
+            <Header state={state} setState={setState} filterData={filterData} searchData={searchData} />
             <CardsList state={state} />
             <Footer />
         </div>

@@ -57,3 +57,16 @@
 .filter > h3 {
   color: #4c4757;
 }
+.price-input {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.rangebox {
+  margin-left: 5px;
+  color: slateblue;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  outline: none;
+}
