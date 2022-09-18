@@ -1,6 +1,6 @@
 [
   {
-    "avgRating": null,
+    "avgRating": 4.5,
     "listingBathroomLabel": "3 baths",
     "bathrooms": 3,
     "listingBedLabel": "4 beds",
@@ -39,7 +39,7 @@
     "roomTypeCategory": "entire_home",
     "roomTypeId": null,
     "spaceType": "Villa",
-    "starRating": null,
+    "starRating": 5,
     "summary": null,
     "wishlistedCount": null,
     "title": "Salobreña, Spain",
@@ -192,7 +192,7 @@
     "avgRatingLocalized": "5.0",
     "accessibilityLabel": "$1,200 per night",
     "concatQualifierLeft": false,
-    "price": "$1,200",
+    "price": "$1200",
     "qualifier": "night",
     "trailingContent": null,
     "adults": 1,
@@ -1168,7 +1168,7 @@
     ]
   },
   {
-    "avgRating": null,
+    "avgRating": 4.8,
     "listingBathroomLabel": "1 bath",
     "bathrooms": 1,
     "listingBedLabel": "1 bed",

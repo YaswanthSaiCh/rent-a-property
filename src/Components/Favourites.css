@@ -1,0 +1,12 @@
+.favourites-component {
+  margin: 40px;
+}
+.nofavourites {
+  text-align: center;
+  color: slateblue;
+  opacity: 0.5;
+}
+.favourites-header {
+  text-align: center;
+  margin-bottom: 20px;
+}

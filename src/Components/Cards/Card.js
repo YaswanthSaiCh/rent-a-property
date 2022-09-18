@@ -1,13 +1,19 @@
-import React, { useState } from "react";
-import { BiBed, BiBath, BiHeart, BiX, BiShapeSquare } from "react-icons/bi";
+import React, { useContext } from "react";
+import { BiBed, BiBath, BiHeart, BiX, BiStar } from "react-icons/bi";
+import { Favourite } from "../../Context/Context";
 import "./Card.css";
 
-const Card = ({ item, state }) => {
-    const [heart, setHeart] = useState(false);
-    const handleChange = (event) => {
-        setHeart(!heart);
-        console.log(event.target.value);
-    };
+const Card = ({ item }) => {
+
+    const { favourites, setFavourites } = useContext(Favourite)
+
+    const handleAddFav = () => {
+        setFavourites([...favourites, item])
+    }
+    const handleDelFav = () => {
+        setFavourites(favourites.filter(removeFav => removeFav.id !== item.id))
+    }
+
     return (
         <article className="card">
             <img src={item.images[0]} alt="/" />
@@ -16,37 +22,40 @@ const Card = ({ item, state }) => {
                     <h3 className="price-heading">
                         {item.price}<span className="sub-heading">/{item.qualifier}</span>
                     </h3>
-                    {heart ? (
+                    {favourites.includes(item) ? (
                         <BiX
+                            id={item.id}
                             className="icon X"
                             size={"2em"}
-                            onClick={(event) => handleChange(event)}
+                            onClick={() => handleDelFav()}
                         />
                     ) : (
                         <BiHeart
+                            id={item.id}
                             className="icon fav"
                             size={"2em"}
-                            onClick={(event) => handleChange(event)}
+                            onClick={() => handleAddFav()}
                         />
                     )}
                 </div>
                 <div className="desc">
                     <h2 className="title">{item.title.split(",")[0]}</h2>
                     <h4 className="location">{item.publicAddress}</h4>
+                    <p className="checkin">Check-in Date:{item.checkin}</p>
                 </div>
             </div>
             <div className="card-footer">
-                <div>
+                <div className="footer-items">
                     <BiBed className="icon" />
-                    <p>{item.bedrooms}Beds</p>
+                    <h5>{item.bedrooms}Beds</h5>
                 </div>
-                <div>
+                <div className="footer-items">
                     <BiBath className="icon" />
-                    <p>{Math.ceil(item.bathrooms)}Bathrooms</p>
+                    <h5>{Math.ceil(item.bathrooms)}Bathrooms</h5>
                 </div>
-                <div>
-                    <BiShapeSquare className="icon" />
-                    <p>Sqft</p>
+                <div className="footer-items">
+                    <BiStar className="icon" />
+                    <h5>{item.avgRating}</h5>
                 </div>
             </div>
         </article>

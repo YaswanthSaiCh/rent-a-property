@@ -23,7 +23,10 @@ img {
 .card-footer {
   justify-content: space-around;
   padding: 10px;
-  border-top: 1px solid rgba(165, 163, 163, 0.414);
+  border-top: 1px solid rgba(165, 163, 163, 0.24);
+}
+.footer-items {
+  align-items: center;
 }
 .icon {
   color: slateblue;
@@ -77,4 +80,9 @@ img {
 .sub-heading {
   font-size: 15px;
   color: rgb(180, 180, 180);
+}
+.checkin {
+  font-weight: bold;
+  color: slateblue;
+  opacity: 0.5;
 }
